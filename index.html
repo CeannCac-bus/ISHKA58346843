@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="sky.css">
+</head>
+<body>
+
+<div class="stars"></div>
+<div class="twinkling"></div>
+<div class="clouds"></div>
+
+<div class="hero" id="hero">
+  <div class="hero-content" id="hero-content">
+    <h1 class="hero-heading">$CATPUCCINO</h1>
+    <div id="about-content" style="display: none;">
+      <h1>😸About Us</h1>
+      <p>Catpuccino is the LATEST and GREATEST cat meme to enter the stage on the solana network.<br><br>How did he get there? Why is he entrapped in the cup? What can we do about it? For all we know catpuccino is a war criminal, an evil mastermind having committed heinous acts for decades only to be locked up in a tighly secured cappuccino cup to end his reign of terror.<br><br> The reality is, Catpuccino is an enigma - so what can WE do about this?</p>
+      <button onclick="showDefault()" class="buttonhero">😸MEOW😸</button>
+    </div>
+    <!-- Placeholder for Tokenomics section -->
+    <div id="tokenomics-content" style="display: none;">
+      <h2>💸Tokenomics</h2>
+      <p>1,000,000,000 TOKENS</p>
+      <p>LIQUIDITY BURNT</p>
+      <p>MINT: REVOKED</p>
+      <button onclick="showDefault()" class="buttonhero">😸MEOW😸</button>
+    </div>
+    <!-- Placeholder for Disclaimer section -->
+    <div id="disclaimer-content" style="display: none;">
+      <h2>😢Disclaimer</h2>
+      <p>catpuccino is a memecoin with no inherent value. Do not buy memecoins with money you cannot afford to lose. Do Proper Research. Always trade responsibly.</p>
+      <button onclick="showDefault()" class="buttonhero">😸MEOW😸</button>
+    </div>
+    <!-- Default content -->
+    <ul id="heronav">
+      <li><a href="#" onclick="showAbout()">😸ABOUT</a></li>
+      <li><a href="#" onclick="showTokenomics()">💸TOKENOMICS</a></li>
+      <li><a href="#" onclick="showDisclaimer()">😢DISCLAIMER</a></li>
+      <li><a href="#">😝TELEGRAM</a></li>
+      <li><a href="#">🌌X/Twitter</a></li>
+      <li><a href="https://dexscreener.com" class="button">Dexscreener</a></li>
+    </ul>
+  </div>
+  <div class="background">
+    <video id="background" autoplay muted loop>
+      <source src="https://cdn.glitch.global/3fb83d57-ae3c-4c12-ba6c-14c075c8a6e5/VIDEO_b3074693-a10b-46ca-ab50-51091eff0d53.mp4?v=1717363083658" type="video/mp4">
+    </video>
+  </div>
+</div>
+
+<footer>
+  <p style="text-align:center; margin-top: 10px;color:white; opacity: .5; font-size: .5em;">catpuccino is a memecoin with no inherent value. Always trade responsibly. DYOR.</p>
+  <p style="text-align:center; margin-top: 10px;color:white; opacity: .5; font-size: .5em;">CATPUCCINO 2024</p>
+</footer>
+
+<script>
+  function showAbout() {
+    document.getElementById("heronav").style.display = "none";
+    document.getElementById("about-content").style.display = "block";
+  }
+
+  function showTokenomics() {
+    document.getElementById("heronav").style.display = "none";
+    document.getElementById("tokenomics-content").style.display = "block";
+  }
+
+  function showDisclaimer() {
+    document.getElementById("heronav").style.display = "none";
+    document.getElementById("disclaimer-content").style.display = "block";
+  }
+
+  function showDefault() {
+    var aboutContent = document.getElementById("about-content");
+    var tokenomicsContent = document.getElementById("tokenomics-content");
+    var disclaimerContent = document.getElementById("disclaimer-content");
+
+    aboutContent.style.animation = "fadeOut 0.5s ease-in-out forwards";
+    tokenomicsContent.style.animation = "fadeOut 0.5s ease-in-out forwards";
+    disclaimerContent.style.animation = "fadeOut 0.5s ease-in-out forwards";
+
+    setTimeout(function() {
+      document.getElementById("heronav").style.display = "flex";
+      aboutContent.style.display = "none";
+      tokenomicsContent.style.display = "none";
+      disclaimerContent.style.display = "none";
+      aboutContent.style.animation = "";
+      tokenomicsContent.style.animation = "";
+      disclaimerContent.style.animation = "";
+    }, 500); // Wait for animation to complete (0.5s)
+  }
+</script>
+
+
+</body>
+</html>
