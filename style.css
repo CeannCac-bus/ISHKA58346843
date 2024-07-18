@@ -92,9 +92,6 @@ a {
   font-family: "Yusei Magic", sans-serif;
   font-weight: 400;
   font-style: normal;
-  background: -webkit-linear-gradient(#e700fc, #fff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 @media (max-width: 1110px) {
